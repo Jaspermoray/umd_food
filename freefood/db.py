@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS events (
     removed      INTEGER NOT NULL DEFAULT 0  -- 1 = cancelled / no longer listed
 );
 
--- Every email we've looked at, so each one is only sent to Claude once.
+-- Every email we've looked at, so each is processed once. Deliberately stores no
+-- subject/sender: this database is committed to a public repo.
 CREATE TABLE IF NOT EXISTS emails_seen (
     id         TEXT PRIMARY KEY,
     subject    TEXT,
@@ -90,8 +91,7 @@ def seen_email_ids(conn: sqlite3.Connection) -> set[str]:
     return {r["id"] for r in conn.execute("SELECT id FROM emails_seen")}
 
 
-def mark_email_seen(conn: sqlite3.Connection, email_id: str, subject: str, n_events: int) -> None:
+def mark_email_seen(conn: sqlite3.Connection, email_id: str, n_events: int) -> None:
     conn.execute(
-        "INSERT OR REPLACE INTO emails_seen (id, subject, n_events) VALUES (?, ?, ?)",
-        (email_id, subject[:200], n_events),
+        "INSERT OR REPLACE INTO emails_seen (id, n_events) VALUES (?, ?)", (email_id, n_events)
     )

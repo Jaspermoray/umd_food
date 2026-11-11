@@ -81,11 +81,15 @@ def fetch_email(conn) -> None:
         extractor, api_errors, mode = rules.extract_events, (), "rules"
 
     emails = gmail.fetch_recent(skip_ids=db.seen_email_ids(conn))
-    candidates = [m for m in emails if extract.might_have_food(m)]
-    print(f"\nEmail ({mode}): {len(emails)} new message(s), {len(candidates)} mention food.")
+    eligible = [m for m in emails if m.is_bulk or m.labeled]  # never personal emails
+    candidates = [m for m in eligible if extract.might_have_food(m)]
+    print(
+        f"\nEmail ({mode}): {len(emails)} new message(s), {len(eligible)} from lists/newsletters, "
+        f"{len(candidates)} mention food."
+    )
     for m in emails:
         if m not in candidates:
-            db.mark_email_seen(conn, m.id, m.subject, 0)
+            db.mark_email_seen(conn, m.id, 0)
     conn.commit()
 
     known = db.upcoming(conn, "terplink") + db.upcoming(conn, "email")
@@ -105,7 +109,7 @@ def fetch_email(conn) -> None:
             known.append(ev)
             added += 1
             print(_fmt(ev))
-        db.mark_email_seen(conn, m.id, m.subject, added)
+        db.mark_email_seen(conn, m.id, added)
         conn.commit()
 
 
