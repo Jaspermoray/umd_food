@@ -9,7 +9,7 @@ import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import db, terplink
+from . import db, dedupe, terplink
 
 ET = ZoneInfo("America/New_York")
 
@@ -30,6 +30,11 @@ def load_dotenv(path: str = ".env") -> None:
             os.environ.setdefault(key.strip(), value.strip().strip('"'))
 
 
+def _fmt(e) -> str:
+    start = datetime.fromisoformat(e.start).astimezone(ET)
+    return f"  {start:%a %b %d %I:%M %p}  {e.title[:60]:<60}  @ {e.location[:40]}"
+
+
 def stale_events(conn, source: str, fetched_uids: set[str]) -> list:
     """Upcoming events we have from `source` that the source no longer lists."""
     upcoming = db.upcoming(conn, source)
@@ -44,16 +49,62 @@ def stale_events(conn, source: str, fetched_uids: set[str]) -> list:
     return stale
 
 
-def fetch(conn) -> list:
+def fetch_terplink(conn) -> list:
     events = terplink.fetch_events()
     for e in events:
         db.upsert(conn, e)
     conn.commit()
     print(f"Found {len(events)} upcoming free-food events on TerpLink:\n")
     for e in events:
-        start = datetime.fromisoformat(e.start).astimezone(ET)
-        print(f"  {start:%a %b %d %I:%M %p}  {e.title[:60]:<60}  @ {e.location[:40]}")
+        print(_fmt(e))
     return stale_events(conn, "terplink", {e.uid for e in events})
+
+
+def fetch_email(conn) -> None:
+    from . import gmail
+
+    if not gmail.is_configured() or not os.environ.get("ANTHROPIC_API_KEY"):
+        print("\nEmail: skipped (GMAIL_TOKEN / ANTHROPIC_API_KEY not configured).")
+        return
+
+    import anthropic
+
+    from . import extract
+
+    client = anthropic.Anthropic()
+    emails = gmail.fetch_recent(skip_ids=db.seen_email_ids(conn))
+    candidates = [m for m in emails if extract.might_have_food(m)]
+    print(f"\nEmail: {len(emails)} new message(s), {len(candidates)} mention food.")
+    for m in emails:
+        if m not in candidates:
+            db.mark_email_seen(conn, m.id, m.subject, 0)
+    conn.commit()
+
+    known = db.upcoming(conn, "terplink") + db.upcoming(conn, "email")
+    for m in candidates:
+        try:
+            found = extract.extract_events(client, m)
+        except anthropic.APIError as err:
+            # Leave it unseen so the next run retries it.
+            print(f"  error on '{m.subject[:50]}': {err.__class__.__name__}; will retry")
+            continue
+        added = 0
+        for ev in found:
+            if any(dedupe.same_event(ev, k) for k in known):
+                print(f"  duplicate, skipped: {ev.title}")
+                continue
+            db.upsert(conn, ev)
+            known.append(ev)
+            added += 1
+            print(_fmt(ev))
+        db.mark_email_seen(conn, m.id, m.subject, added)
+        conn.commit()
+
+
+def email_dupes_of_terplink(conn) -> list:
+    """Email-sourced events that TerpLink now also lists — TerpLink's version wins."""
+    tl = db.upcoming(conn, "terplink")
+    return [r for r in db.upcoming(conn, "email") if any(dedupe.same_event(r, t) for t in tl)]
 
 
 def main() -> None:
@@ -62,16 +113,18 @@ def main() -> None:
     if cmd not in ("fetch", "sync"):
         sys.exit(__doc__)
     conn = db.connect()
-    stale = fetch(conn)
-    if stale:
-        print(f"\n{len(stale)} event(s) no longer listed:")
-        for r in stale:
+    to_remove = fetch_terplink(conn)
+    fetch_email(conn)
+    to_remove += email_dupes_of_terplink(conn)
+    if to_remove:
+        print(f"\n{len(to_remove)} event(s) to remove (cancelled, unlisted, or duplicate):")
+        for r in to_remove:
             print(f"  - {r['title']}")
     if cmd == "sync":
         from . import gcal
 
         print("\nSyncing to Google Calendar...")
-        n, removed = gcal.sync(conn, stale)
+        n, removed = gcal.sync(conn, to_remove)
         print(f"Done: {n} created/updated, {removed} removed.")
 
 

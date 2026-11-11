@@ -22,6 +22,14 @@ CREATE TABLE IF NOT EXISTS events (
     first_seen   TEXT DEFAULT CURRENT_TIMESTAMP,
     removed      INTEGER NOT NULL DEFAULT 0  -- 1 = cancelled / no longer listed
 );
+
+-- Every email we've looked at, so each one is only sent to Claude once.
+CREATE TABLE IF NOT EXISTS emails_seen (
+    id         TEXT PRIMARY KEY,
+    subject    TEXT,
+    n_events   INTEGER NOT NULL,
+    seen_at    TEXT DEFAULT CURRENT_TIMESTAMP
+);
 """
 
 EVENT_FIELDS = [f.name for f in fields(Event)]
@@ -75,4 +83,15 @@ def upcoming(conn: sqlite3.Connection, source: str) -> list[sqlite3.Row]:
 def mark_removed(conn: sqlite3.Connection, uid: str) -> None:
     conn.execute(
         "UPDATE events SET removed=1, gcal_id=NULL, synced_hash=NULL WHERE uid=?", (uid,)
+    )
+
+
+def seen_email_ids(conn: sqlite3.Connection) -> set[str]:
+    return {r["id"] for r in conn.execute("SELECT id FROM emails_seen")}
+
+
+def mark_email_seen(conn: sqlite3.Connection, email_id: str, subject: str, n_events: int) -> None:
+    conn.execute(
+        "INSERT OR REPLACE INTO emails_seen (id, subject, n_events) VALUES (?, ?, ?)",
+        (email_id, subject[:200], n_events),
     )
