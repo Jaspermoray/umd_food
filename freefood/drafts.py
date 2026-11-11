@@ -4,9 +4,11 @@ Create (not send) "please add me to your list" email drafts in your Gmail.
   python -m freefood.drafts --name "Your Name"            # create drafts
   python -m freefood.drafts --name "Your Name" --dry-run  # preview only
 
-Reads contacts.csv with columns: name,email,list_name   (list_name is optional)
-Each contact gets one draft; contacts already drafted are skipped (tracked in
-drafts_log.csv). Review the drafts in Gmail and send them yourself — a handful
+Reads contacts.csv with columns: name,email,list_name,kind
+  kind = ask       -> polite "please add me" email to a person/office (default)
+  kind = listserv  -> SUBSCRIBE command to UMD LISTSERV (email = listserv@listserv.umd.edu)
+  kind = mailman   -> "subscribe" command to a Mailman list's -request address
+Each row gets one draft; rows already drafted are skipped (tracked in drafts_log.csv). Review the drafts in Gmail and send them yourself — a handful
 per day is best, since a burst of near-identical emails looks like spam.
 
 This uses its own login (gmail_drafts_token.json, "compose" permission) that stays
@@ -45,9 +47,27 @@ def _service():
     return build("gmail", "v1", credentials=creds, cache_discovery=False)
 
 
+def key(contact: dict) -> str:
+    """Several rows can share an address (all LISTSERV commands go to one), so key on both."""
+    return f"{contact['email'].strip().lower()}|{(contact.get('list_name') or '').strip().upper()}"
+
+
 def compose(contact: dict, sender_name: str) -> EmailMessage:
     name = (contact.get("name") or "").strip()
     list_name = (contact.get("list_name") or "").strip()
+    kind = (contact.get("kind") or "ask").strip().lower()
+    msg = EmailMessage()
+    msg["To"] = contact["email"].strip()
+    if kind == "listserv":
+        # LISTSERV reads commands from the body; no subject, and no signature
+        # (extra lines get parsed as more commands).
+        msg["Subject"] = ""
+        msg.set_content(f"SUBSCRIBE {list_name} {sender_name}")
+        return msg
+    if kind == "mailman":
+        msg["Subject"] = "subscribe"
+        msg.set_content("subscribe")
+        return msg
     greeting = f"Hi {name.split()[0]}," if name else "Hi,"
     msg = EmailMessage()
     msg["To"] = f"{name} <{contact['email'].strip()}>" if name else contact["email"].strip()
@@ -71,8 +91,8 @@ def main() -> None:
     done = set()
     if os.path.exists(LOG):
         with open(LOG, newline="") as f:
-            done = {r["email"].strip().lower() for r in csv.DictReader(f)}
-    todo = [c for c in contacts if c["email"].strip().lower() not in done]
+            done = {r["key"] for r in csv.DictReader(f)}
+    todo = [c for c in contacts if key(c) not in done]
     print(f"{len(contacts)} contact(s), {len(contacts) - len(todo)} already drafted, {len(todo)} to go.\n")
 
     if args.dry_run:
@@ -84,16 +104,16 @@ def main() -> None:
     svc = _service()
     new_log = not os.path.exists(LOG)
     with open(LOG, "a", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["email", "draft_id", "created"])
+        w = csv.DictWriter(f, fieldnames=["key", "draft_id", "created"])
         if new_log:
             w.writeheader()
         for c in todo:
             raw = base64.urlsafe_b64encode(compose(c, args.name).as_bytes()).decode()
             d = svc.users().drafts().create(userId="me", body={"message": {"raw": raw}}).execute()
-            w.writerow({"email": c["email"].strip(), "draft_id": d["id"],
+            w.writerow({"key": key(c), "draft_id": d["id"],
                         "created": datetime.now().isoformat(timespec="seconds")})
             f.flush()
-            print(f"  drafted: {c['email'].strip()}")
+            print(f"  drafted: {c['email'].strip()}  {c.get('list_name') or ''}")
     print(f"\nDone. Open Gmail → Drafts to review and send.")
 
 
