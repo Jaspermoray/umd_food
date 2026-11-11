@@ -1,0 +1,1666 @@
+[
+{
+"name": "251 North",
+"code": ""
+},
+{
+"name": "94th Aero Squadron",
+"code": ""
+},
+{
+"name": "A Harvey Wiley Federal Building FDA",
+"code": "FDA"
+},
+{
+"name": "A. James Clark Hall",
+"code": "AJC"
+},
+{
+"name": "A.V. Williams Building",
+"code": "AVW"
+},
+{
+"name": "Adele H. Stamp Student Union Buildings",
+"code": "SSU"
+},
+{
+"name": "Agriculture Shed",
+"code": ""
+},
+{
+"name": "Allegany Hall (Residence Hall)",
+"code": "AGY"
+},
+{
+"name": "Alpha Chi Omega Sorority",
+"code": ""
+},
+{
+"name": "Alpha Delta Pi Sorority",
+"code": ""
+},
+{
+"name": "Alpha Epsilon Phi Sorority",
+"code": ""
+},
+{
+"name": "Alpha Epsilon Pi",
+"code": ""
+},
+{
+"name": "Alpha Phi Sorority",
+"code": ""
+},
+{
+"name": "Alpha Sigma Phi Fraternity",
+"code": ""
+},
+{
+"name": "American Center for Physics",
+"code": ""
+},
+{
+"name": "Animal Science Service Building",
+"code": ""
+},
+{
+"name": "Animal Science/Agricultural Engineering Building",
+"code": "ANS"
+},
+{
+"name": "Annapolis Hall",
+"code": ""
+},
+{
+"name": "Anne Arundel Hall",
+"code": "ANA"
+},
+{
+"name": "Apiary",
+"code": ""
+},
+{
+"name": "Aquatics Center",
+"code": ""
+},
+{
+"name": "Architecture Building",
+"code": "ARC"
+},
+{
+"name": "Art-Sociology Building",
+"code": "ASY"
+},
+{
+"name": "Baltimore Hall (Residence Hall)",
+"code": "BAL"
+},
+{
+"name": "Bel Air Hall (Residence Hall)",
+"code": "BEL"
+},
+{
+"name": "Benjamin Building",
+"code": "EDU"
+},
+{
+"name": "Biology-Psychology Building",
+"code": "BPS"
+},
+{
+"name": "Biomolecular Sciences Building",
+"code": ""
+},
+{
+"name": "Biosciences Research Building",
+"code": "BRB"
+},
+{
+"name": "Blacksmith Shop",
+"code": ""
+},
+{
+"name": "Brendan Iribe Center",
+"code": ""
+},
+{
+"name": "Building Services Operations Building",
+"code": ""
+},
+{
+"name": "Byrd Stadium",
+"code": "BRD"
+},
+{
+"name": "Byrd Stadium Maintenance Building",
+"code": ""
+},
+{
+"name": "Calvert Hall (Residence Hall)",
+"code": "CAL"
+},
+{
+"name": "Cambridge Community Center",
+"code": "CCC"
+},
+{
+"name": "Cambridge Hall (Residence Hall)",
+"code": "CAM"
+},
+{
+"name": "Caroline Hall (Residence Hall)",
+"code": "CAR"
+},
+{
+"name": "Caroll Hall (Residence Hall)",
+"code": "CRL"
+},
+{
+"name": "Catholic Student Center",
+"code": ""
+},
+{
+"name": "Cattle Barn",
+"code": ""
+},
+{
+"name": "Cecil Hall",
+"code": "CEC"
+},
+{
+"name": "Center for Young Children",
+"code": ""
+},
+{
+"name": "Center for the Advanced Study of Language",
+"code": ""
+},
+{
+"name": "Central Animal Resources Facility",
+"code": ""
+},
+{
+"name": "Centreville Hall (Residence Hall)",
+"code": "CEN"
+},
+{
+"name": "Chabad Jewish Student Center",
+"code": ""
+},
+{
+"name": "Challenge Course",
+"code": ""
+},
+{
+"name": "Chapel Fields",
+"code": ""
+},
+{
+"name": "Charles Hall (Residence Hall)",
+"code": "CHL"
+},
+{
+"name": "Chemical and Nuclear Engineering Building",
+"code": "CHE"
+},
+{
+"name": "Chemistry Building",
+"code": "CHM"
+},
+{
+"name": "Chesapeake Building",
+"code": ""
+},
+{
+"name": "Chestertown Hall (Residence Hall)",
+"code": "CHS"
+},
+{
+"name": "Chincoteague Hall",
+"code": ""
+},
+{
+"name": "Clarice Smith Performing Arts Center",
+"code": "PAC"
+},
+{
+"name": "Climbing Wall",
+"code": ""
+},
+{
+"name": "Cole Student Activities Building",
+"code": "COL"
+},
+{
+"name": "College Park Fire Station",
+"code": ""
+},
+{
+"name": "College Park LDS Institute of Religion",
+"code": ""
+},
+{
+"name": "College Park Metro Station",
+"code": ""
+},
+{
+"name": "Comcast Center",
+"code": ""
+},
+{
+"name": "Computer Science Instructional Center",
+"code": "CSI"
+},
+{
+"name": "Computer and Space Sciences Building",
+"code": "CSS"
+},
+{
+"name": "Cumberland Hall (Residence Hall)",
+"code": "CBD"
+},
+{
+"name": "DOTS Impound",
+"code": ""
+},
+{
+"name": "Delta Chi Fraternity",
+"code": ""
+},
+{
+"name": "Delta Gamma Sorority",
+"code": ""
+},
+{
+"name": "Delta Phi Epsilon Sorority",
+"code": ""
+},
+{
+"name": "Denton Hall (Residence Hall)",
+"code": "DEN"
+},
+{
+"name": "Dorchester Hall (Residence Hall)",
+"code": "DOR"
+},
+{
+"name": "E.A. Fernandez IDEA Factory",
+"code": ""
+},
+{
+"name": "Easton Hall (Residence Hall)",
+"code": "EAS"
+},
+{
+"name": "Edward St. John Learning and Teaching Center",
+"code": "ESJ"
+},
+{
+"name": "Elkton Hall (Residence Hall)",
+"code": "ELK"
+},
+{
+"name": "Ellicott Hall (Residence Hall)",
+"code": "ELL"
+},
+{
+"name": "Energy Plant",
+"code": ""
+},
+{
+"name": "Energy Research Facility",
+"code": ""
+},
+{
+"name": "Engineering Annex",
+"code": "EAB"
+},
+{
+"name": "Engineering Fields",
+"code": ""
+},
+{
+"name": "Engineering Laboratory Building",
+"code": "EGL"
+},
+{
+"name": "Environmental Services Facility",
+"code": ""
+},
+{
+"name": "Episcopal Student Center",
+"code": ""
+},
+{
+"name": "Eppley Campus Recreation Center",
+"code": "CRC"
+},
+{
+"name": "Field Hockey and Lacrosse Complex",
+"code": ""
+},
+{
+"name": "Francis Scott Key Hall",
+"code": "KEY"
+},
+{
+"name": "Fraternity Fields",
+"code": ""
+},
+{
+"name": "Frederick Hall (Residence Hall)",
+"code": "FRD"
+},
+{
+"name": "Garrett Hall (Residence Hall)",
+"code": "GRT"
+},
+{
+"name": "Gate House",
+"code": ""
+},
+{
+"name": "Geology Building",
+"code": "GEO"
+},
+{
+"name": "Golf Course Clubhouse",
+"code": "GLF"
+},
+{
+"name": "Golf Course Maintenance",
+"code": ""
+},
+{
+"name": "Golub Property",
+"code": ""
+},
+{
+"name": "Gossett Football Team House",
+"code": ""
+},
+{
+"name": "Graduate Garden Apartment Complex",
+"code": ""
+},
+{
+"name": "Ground Herbicide/Pesticide Storage Building",
+"code": ""
+},
+{
+"name": "Grounds Material and Equipment Building",
+"code": ""
+},
+{
+"name": "Grounds Office Building",
+"code": ""
+},
+{
+"name": "Grounds Operations and Maintenance Facility",
+"code": ""
+},
+{
+"name": "H.J. Patterson Hall",
+"code": "HJP"
+},
+{
+"name": "HVAC Building",
+"code": ""
+},
+{
+"name": "Hagerstown Hall (Residence Hall)",
+"code": "HAG"
+},
+{
+"name": "Harford Hall (Residence Hall)",
+"code": "HRF"
+},
+{
+"name": "Harrison Lab",
+"code": "HAR"
+},
+{
+"name": "Health Center",
+"code": ""
+},
+{
+"name": "Heavy Equipment Building",
+"code": ""
+},
+{
+"name": "Herbert Wells Ice Rink",
+"code": ""
+},
+{
+"name": "Holzapfel Hall (Horticulture)",
+"code": "HZF"
+},
+{
+"name": "Hope Lutheran Church",
+"code": ""
+},
+{
+"name": "Hornbake Library",
+"code": "HBK"
+},
+{
+"name": "Horse Barn",
+"code": ""
+},
+{
+"name": "Howard Hall (Residence Hall)",
+"code": "HOW"
+},
+{
+"name": "Indoor Practice Facility",
+"code": ""
+},
+{
+"name": "Institute for Physical Science and Technology",
+"code": "IPT"
+},
+{
+"name": "Institute for Physical Science and Technology Storage",
+"code": "IPT"
+},
+{
+"name": "Instructional Television Facility",
+"code": "ITV"
+},
+{
+"name": "J. Logan and Louise Schutz Football Practice Complex",
+"code": ""
+},
+{
+"name": "J.H. Kehoe Track and Ludwig Field",
+"code": ""
+},
+{
+"name": "J.M. Patterson Building",
+"code": "JMP"
+},
+{
+"name": "Jeong H. Kim Engineering Building",
+"code": "KEB"
+},
+{
+"name": "Jimenez Hall",
+"code": "JMZ"
+},
+{
+"name": "Johnson-Whittle Hall (Residence Hall)",
+"code": ""
+},
+{
+"name": "Jull Hall",
+"code": "JUL"
+},
+{
+"name": "Kappa Alpha Fraternity",
+"code": ""
+},
+{
+"name": "Kent Hall (Residence Hall)",
+"code": "KNT"
+},
+{
+"name": "Knight Hall",
+"code": "KNI"
+},
+{
+"name": "LEAFHouse",
+"code": ""
+},
+{
+"name": "LaPlata Beach",
+"code": ""
+},
+{
+"name": "LaPlata Hall (Residence Hall)",
+"code": "LPA"
+},
+{
+"name": "Laboratory for Physical Sciences",
+"code": ""
+},
+{
+"name": "Laboratory for Telecommunications Sciences",
+"code": ""
+},
+{
+"name": "Lamda Chi Alpha Fraternity",
+"code": ""
+},
+{
+"name": "LeFrak Hall",
+"code": "LEF"
+},
+{
+"name": "Lee Building",
+"code": ""
+},
+{
+"name": "Leonardtown Community Center",
+"code": ""
+},
+{
+"name": "Leonardtown Housing",
+"code": ""
+},
+{
+"name": "Leonardtown Housing 12",
+"code": ""
+},
+{
+"name": "Leonardtown Housing1",
+"code": ""
+},
+{
+"name": "Leonardtown Housing10",
+"code": ""
+},
+{
+"name": "Leonardtown Housing12",
+"code": ""
+},
+{
+"name": "Leonardtown Housing2",
+"code": ""
+},
+{
+"name": "Leonardtown Housing3",
+"code": ""
+},
+{
+"name": "Leonardtown Housing4",
+"code": ""
+},
+{
+"name": "Leonardtown Housing5",
+"code": ""
+},
+{
+"name": "Leonardtown Housing6",
+"code": ""
+},
+{
+"name": "Leonardtown Housing7",
+"code": ""
+},
+{
+"name": "Leonardtown Housing8",
+"code": ""
+},
+{
+"name": "Leonardtown Housing9",
+"code": ""
+},
+{
+"name": "Leonardtown Office Building",
+"code": ""
+},
+{
+"name": "Lot",
+"code": ""
+},
+{
+"name": "MFRI Drill Tower",
+"code": ""
+},
+{
+"name": "MFRI Fire Extinguisher Training Facility",
+"code": ""
+},
+{
+"name": "MFRI Office/Classroom Building",
+"code": ""
+},
+{
+"name": "MFRI Structural Firefighting Building",
+"code": ""
+},
+{
+"name": "Main Administration Building",
+"code": ""
+},
+{
+"name": "Manufacturing Building",
+"code": ""
+},
+{
+"name": "Marie Mount Hall",
+"code": "MMH"
+},
+{
+"name": "Martin Hall",
+"code": "EGR"
+},
+{
+"name": "Mathematics Building",
+"code": "MTH"
+},
+{
+"name": "McKeldin Library",
+"code": "MCK"
+},
+{
+"name": "McKeldin Mall",
+"code": "MKM"
+},
+{
+"name": "Memorial Chapel",
+"code": ""
+},
+{
+"name": "Metro Parking Garage",
+"code": ""
+},
+{
+"name": "Microbiology Building",
+"code": "MCB"
+},
+{
+"name": "Mitchell Building",
+"code": ""
+},
+{
+"name": "Montgomery Hall (Residence Hall)",
+"code": "MNT"
+},
+{
+"name": "Morrill Hall",
+"code": "MOR"
+},
+{
+"name": "Motor Transportation Facility",
+"code": ""
+},
+{
+"name": "Motorcycle Storage Building",
+"code": ""
+},
+{
+"name": "Mowatt Lane Parking Garage",
+"code": ""
+},
+{
+"name": "Mowatt Lane Substation",
+"code": ""
+},
+{
+"name": "NOAA Center for Weather and Climate Prediction",
+"code": ""
+},
+{
+"name": "Neutral Buoyancy Research Facility",
+"code": ""
+},
+{
+"name": "Nyumburu Cultural Center",
+"code": "NCC"
+},
+{
+"name": "Oakland Hall (Residence Hall)",
+"code": ""
+},
+{
+"name": "Paint Branch Drive Visitors Lot",
+"code": ""
+},
+{
+"name": "Parking Lot 11b",
+"code": ""
+},
+{
+"name": "Parking Lot 11c",
+"code": ""
+},
+{
+"name": "Parking Lot 11h",
+"code": ""
+},
+{
+"name": "Parking Lot 15",
+"code": ""
+},
+{
+"name": "Parking Lot 16a",
+"code": ""
+},
+{
+"name": "Parking Lot 16b",
+"code": ""
+},
+{
+"name": "Parking Lot 16c",
+"code": ""
+},
+{
+"name": "Parking Lot 16d",
+"code": ""
+},
+{
+"name": "Parking Lot 16e",
+"code": ""
+},
+{
+"name": "Parking Lot 16h",
+"code": ""
+},
+{
+"name": "Parking Lot 19",
+"code": ""
+},
+{
+"name": "Parking Lot 1b",
+"code": ""
+},
+{
+"name": "Parking Lot 1d",
+"code": ""
+},
+{
+"name": "Parking Lot 2a",
+"code": ""
+},
+{
+"name": "Parking Lot 2b",
+"code": ""
+},
+{
+"name": "Parking Lot 2c",
+"code": ""
+},
+{
+"name": "Parking Lot 2d",
+"code": ""
+},
+{
+"name": "Parking Lot 2f",
+"code": ""
+},
+{
+"name": "Parking Lot 2g",
+"code": ""
+},
+{
+"name": "Parking Lot 4b",
+"code": ""
+},
+{
+"name": "Parking Lot 4j",
+"code": ""
+},
+{
+"name": "Parking Lot 4n",
+"code": ""
+},
+{
+"name": "Parking Lot 5",
+"code": ""
+},
+{
+"name": "Parking Lot 6",
+"code": ""
+},
+{
+"name": "Parking Lot 9b",
+"code": ""
+},
+{
+"name": "Parking Lot 9c",
+"code": ""
+},
+{
+"name": "Parking Lot A",
+"code": ""
+},
+{
+"name": "Parking Lot A*1",
+"code": ""
+},
+{
+"name": "Parking Lot B",
+"code": ""
+},
+{
+"name": "Parking Lot BB",
+"code": ""
+},
+{
+"name": "Parking Lot C1",
+"code": ""
+},
+{
+"name": "Parking Lot C2",
+"code": ""
+},
+{
+"name": "Parking Lot CC1",
+"code": ""
+},
+{
+"name": "Parking Lot CC2",
+"code": ""
+},
+{
+"name": "Parking Lot D",
+"code": ""
+},
+{
+"name": "Parking Lot E",
+"code": ""
+},
+{
+"name": "Parking Lot E*1",
+"code": ""
+},
+{
+"name": "Parking Lot E*2",
+"code": ""
+},
+{
+"name": "Parking Lot EE",
+"code": ""
+},
+{
+"name": "Parking Lot F",
+"code": ""
+},
+{
+"name": "Parking Lot FF",
+"code": ""
+},
+{
+"name": "Parking Lot FF2",
+"code": ""
+},
+{
+"name": "Parking Lot G",
+"code": ""
+},
+{
+"name": "Parking Lot H1",
+"code": ""
+},
+{
+"name": "Parking Lot HH1",
+"code": ""
+},
+{
+"name": "Parking Lot HH2",
+"code": ""
+},
+{
+"name": "Parking Lot I*",
+"code": ""
+},
+{
+"name": "Parking Lot II1",
+"code": ""
+},
+{
+"name": "Parking Lot JJ1",
+"code": ""
+},
+{
+"name": "Parking Lot JJ2",
+"code": ""
+},
+{
+"name": "Parking Lot JJ3",
+"code": ""
+},
+{
+"name": "Parking Lot K*2",
+"code": ""
+},
+{
+"name": "Parking Lot K*4",
+"code": ""
+},
+{
+"name": "Parking Lot K*5",
+"code": ""
+},
+{
+"name": "Parking Lot K1",
+"code": ""
+},
+{
+"name": "Parking Lot K2",
+"code": ""
+},
+{
+"name": "Parking Lot K4",
+"code": ""
+},
+{
+"name": "Parking Lot K5",
+"code": ""
+},
+{
+"name": "Parking Lot K6",
+"code": ""
+},
+{
+"name": "Parking Lot KK",
+"code": ""
+},
+{
+"name": "Parking Lot KK1",
+"code": ""
+},
+{
+"name": "Parking Lot L",
+"code": ""
+},
+{
+"name": "Parking Lot L*",
+"code": ""
+},
+{
+"name": "Parking Lot ML*",
+"code": ""
+},
+{
+"name": "Parking Lot MM1",
+"code": ""
+},
+{
+"name": "Parking Lot MM2",
+"code": ""
+},
+{
+"name": "Parking Lot MM3",
+"code": ""
+},
+{
+"name": "Parking Lot N",
+"code": ""
+},
+{
+"name": "Parking Lot N*",
+"code": ""
+},
+{
+"name": "Parking Lot N*1",
+"code": ""
+},
+{
+"name": "Parking Lot N*2",
+"code": ""
+},
+{
+"name": "Parking Lot N*3",
+"code": ""
+},
+{
+"name": "Parking Lot N3",
+"code": ""
+},
+{
+"name": "Parking Lot N4",
+"code": ""
+},
+{
+"name": "Parking Lot N5",
+"code": ""
+},
+{
+"name": "Parking Lot N7",
+"code": ""
+},
+{
+"name": "Parking Lot N9",
+"code": ""
+},
+{
+"name": "Parking Lot O1",
+"code": ""
+},
+{
+"name": "Parking Lot O3",
+"code": ""
+},
+{
+"name": "Parking Lot O4",
+"code": ""
+},
+{
+"name": "Parking Lot O5",
+"code": ""
+},
+{
+"name": "Parking Lot P*",
+"code": ""
+},
+{
+"name": "Parking Lot P1",
+"code": ""
+},
+{
+"name": "Parking Lot P2",
+"code": ""
+},
+{
+"name": "Parking Lot PP*",
+"code": ""
+},
+{
+"name": "Parking Lot PP1",
+"code": ""
+},
+{
+"name": "Parking Lot PP2",
+"code": ""
+},
+{
+"name": "Parking Lot Q",
+"code": ""
+},
+{
+"name": "Parking Lot Q1",
+"code": ""
+},
+{
+"name": "Parking Lot R*",
+"code": ""
+},
+{
+"name": "Parking Lot R3",
+"code": ""
+},
+{
+"name": "Parking Lot R4",
+"code": ""
+},
+{
+"name": "Parking Lot RR",
+"code": ""
+},
+{
+"name": "Parking Lot RR1",
+"code": ""
+},
+{
+"name": "Parking Lot RR2",
+"code": ""
+},
+{
+"name": "Parking Lot S3",
+"code": ""
+},
+{
+"name": "Parking Lot S4",
+"code": ""
+},
+{
+"name": "Parking Lot S5",
+"code": ""
+},
+{
+"name": "Parking Lot S7",
+"code": ""
+},
+{
+"name": "Parking Lot S8",
+"code": ""
+},
+{
+"name": "Parking Lot SD*",
+"code": ""
+},
+{
+"name": "Parking Lot SS1",
+"code": ""
+},
+{
+"name": "Parking Lot SS2",
+"code": ""
+},
+{
+"name": "Parking Lot SS3",
+"code": ""
+},
+{
+"name": "Parking Lot T",
+"code": ""
+},
+{
+"name": "Parking Lot TT",
+"code": ""
+},
+{
+"name": "Parking Lot U1",
+"code": ""
+},
+{
+"name": "Parking Lot U6",
+"code": ""
+},
+{
+"name": "Parking Lot UU",
+"code": ""
+},
+{
+"name": "Parking Lot W",
+"code": ""
+},
+{
+"name": "Parking Lot W1",
+"code": ""
+},
+{
+"name": "Parking Lot XX1",
+"code": ""
+},
+{
+"name": "Parking Lot XX2",
+"code": ""
+},
+{
+"name": "Parking Lot XX4",
+"code": ""
+},
+{
+"name": "Parking Lot XX5",
+"code": ""
+},
+{
+"name": "Parking Lot Y",
+"code": ""
+},
+{
+"name": "Parking Lot YC",
+"code": ""
+},
+{
+"name": "Parking Lot Z",
+"code": ""
+},
+{
+"name": "Parking Lot Z*",
+"code": ""
+},
+{
+"name": "Parking Lot Z1",
+"code": ""
+},
+{
+"name": "Parking lot 16f",
+"code": ""
+},
+{
+"name": "Patapsco Building",
+"code": ""
+},
+{
+"name": "Patuxent Building",
+"code": ""
+},
+{
+"name": "Pest Control Trailer",
+"code": ""
+},
+{
+"name": "Phi Kappa Tau",
+"code": ""
+},
+{
+"name": "Phi Sigma Sigma Sorority",
+"code": ""
+},
+{
+"name": "Physical Distribution Center (Terrapin Trader)",
+"code": ""
+},
+{
+"name": "Physics Building",
+"code": "PHY"
+},
+{
+"name": "Pi Kappa Alpha Fraternity",
+"code": ""
+},
+{
+"name": "Plant Operations and Maintenance",
+"code": ""
+},
+{
+"name": "Plant Operations and Maintenance Shop Building",
+"code": ""
+},
+{
+"name": "Plant Operations and Maintenance Shop2",
+"code": ""
+},
+{
+"name": "Plant Operations and Maintenance Shop3",
+"code": ""
+},
+{
+"name": "Plant Operations and Maintenance Shops",
+"code": ""
+},
+{
+"name": "Plant Operations and Maintenance Warehouse",
+"code": ""
+},
+{
+"name": "Plant Science Building",
+"code": "PLS"
+},
+{
+"name": "Pocomoke Building",
+"code": ""
+},
+{
+"name": "Police Impound",
+"code": ""
+},
+{
+"name": "Police Substation",
+"code": ""
+},
+{
+"name": "Potomac Building",
+"code": ""
+},
+{
+"name": "Preinkert Field House",
+"code": "PKT"
+},
+{
+"name": "Presidents Residence",
+"code": ""
+},
+{
+"name": "Prince Georges Hall",
+"code": "PGG"
+},
+{
+"name": "Pump House",
+"code": ""
+},
+{
+"name": "Pyon-Chen Hall (Residence Hall)",
+"code": ""
+},
+{
+"name": "Queen Annes Hall",
+"code": "QAN"
+},
+{
+"name": "Reckord Armory",
+"code": "ARM"
+},
+{
+"name": "Recreation Artificial Turf Field",
+"code": ""
+},
+{
+"name": "Recycling Center",
+"code": ""
+},
+{
+"name": "Regents Drive Parking Garage",
+"code": ""
+},
+{
+"name": "Research Greenhouse",
+"code": ""
+},
+{
+"name": "Ritchie Coliseum",
+"code": "RIT"
+},
+{
+"name": "Robert E. Taylor Softball Stadium",
+"code": ""
+},
+{
+"name": "Rosenbloom Hillel Center for Jewish Life",
+"code": ""
+},
+{
+"name": "Rossborough Inn",
+"code": ""
+},
+{
+"name": "Route One Annex",
+"code": ""
+},
+{
+"name": "Samuel Riggs IV Alumni Center",
+"code": ""
+},
+{
+"name": "Satellite Central Utilities Building 1",
+"code": "SCUB 1"
+},
+{
+"name": "Satellite Central Utilities Building 2",
+"code": "SCUB 2"
+},
+{
+"name": "Satellite Central Utilities Building 3",
+"code": "SCUB 3"
+},
+{
+"name": "Satellite Central Utilities Building 4",
+"code": "SCUB 4"
+},
+{
+"name": "School of Public Health",
+"code": "SPH"
+},
+{
+"name": "School of Public Policy",
+"code": ""
+},
+{
+"name": "Security Booth (Campus Drive)",
+"code": ""
+},
+{
+"name": "Security Booth (Stadium Drive)",
+"code": ""
+},
+{
+"name": "Service Building (University of Maryland, Police)",
+"code": ""
+},
+{
+"name": "Sheep Barn",
+"code": ""
+},
+{
+"name": "Shipley Field House (Baseball)",
+"code": ""
+},
+{
+"name": "Shoemaker Building",
+"code": "SHM"
+},
+{
+"name": "Shriver Laboratory",
+"code": "SHR"
+},
+{
+"name": "Shuttle Bus Facility",
+"code": ""
+},
+{
+"name": "Shuttle Bus Trailer 2",
+"code": ""
+},
+{
+"name": "Sigma Delta Tau Sorority",
+"code": ""
+},
+{
+"name": "Sigma Kappa Sorority",
+"code": ""
+},
+{
+"name": "Sigma Phi Epsilon Fraternity",
+"code": ""
+},
+{
+"name": "Skinner Building",
+"code": "SKN"
+},
+{
+"name": "Somerset Hall (Residence Hall)",
+"code": "SOM"
+},
+{
+"name": "South Campus Commons 1",
+"code": ""
+},
+{
+"name": "South Campus Commons 2",
+"code": ""
+},
+{
+"name": "South Campus Commons 3",
+"code": ""
+},
+{
+"name": "South Campus Commons 4",
+"code": ""
+},
+{
+"name": "South Campus Commons 5",
+"code": ""
+},
+{
+"name": "South Campus Commons 6",
+"code": ""
+},
+{
+"name": "South Campus Commons 7",
+"code": ""
+},
+{
+"name": "South Campus Dining Hall",
+"code": "SDH"
+},
+{
+"name": "South Gate (Regents Dr. and Rt. 1)",
+"code": ""
+},
+{
+"name": "Special Education Trailer One",
+"code": ""
+},
+{
+"name": "Special Education Trailer Two",
+"code": ""
+},
+{
+"name": "Special Services Office Building",
+"code": ""
+},
+{
+"name": "St. Mary's Hall (Residence Hall)",
+"code": "STM"
+},
+{
+"name": "Stadium Drive Parking Garage",
+"code": "SDG"
+},
+{
+"name": "Susquehanna Hall",
+"code": "SQH"
+},
+{
+"name": "Symons Hall",
+"code": "SYM"
+},
+{
+"name": "Talbot Hall (Residence Hall)",
+"code": "TAL"
+},
+{
+"name": "Taliaferro Hall",
+"code": "TLF"
+},
+{
+"name": "Tau Kappa Epsilon Fraternity",
+"code": ""
+},
+{
+"name": "Tawes Fine Arts Building",
+"code": "TWS"
+},
+{
+"name": "Technology Advancement Building",
+"code": ""
+},
+{
+"name": "Technology Ventures Building",
+"code": ""
+},
+{
+"name": "Temporary Building",
+"code": ""
+},
+{
+"name": "Temporary Building1",
+"code": ""
+},
+{
+"name": "Temporary Building2",
+"code": ""
+},
+{
+"name": "Terrapin Trail Parking Garage",
+"code": ""
+},
+{
+"name": "The Diner",
+"code": ""
+},
+{
+"name": "The Domain",
+"code": ""
+},
+{
+"name": "The Varsity",
+"code": ""
+},
+{
+"name": "Track/Soccer Ticket Booth",
+"code": ""
+},
+{
+"name": "Turner Hall (Dairy/Visitor Center)",
+"code": "TUR"
+},
+{
+"name": "Tydings Hall",
+"code": "TYD"
+},
+{
+"name": "Tyser Tower",
+"code": ""
+},
+{
+"name": "UMUC Hotel",
+"code": ""
+},
+{
+"name": "UMUC Inn and Conference Center (ICC)",
+"code": "ICC"
+},
+{
+"name": "UMUC Student and Faculty Services Center",
+"code": "SFSC"
+},
+{
+"name": "UMUC/University College Garage (PGUC)",
+"code": "PGUC"
+},
+{
+"name": "Union Lane Parking Garage",
+"code": "ULG"
+},
+{
+"name": "University Baptist Church",
+"code": ""
+},
+{
+"name": "University Hills Apartments1",
+"code": ""
+},
+{
+"name": "University Hills Apartments2",
+"code": ""
+},
+{
+"name": "University Hills Apartments3",
+"code": ""
+},
+{
+"name": "University Hills Apartments4",
+"code": ""
+},
+{
+"name": "University Hills Apartments5",
+"code": ""
+},
+{
+"name": "University Hills Apartments6",
+"code": ""
+},
+{
+"name": "University Hills Apartments7",
+"code": ""
+},
+{
+"name": "University United Methodist Church",
+"code": ""
+},
+{
+"name": "University View",
+"code": ""
+},
+{
+"name": "University View II",
+"code": ""
+},
+{
+"name": "Univesity Research Center (North)",
+"code": ""
+},
+{
+"name": "Univesity Research Center (South)",
+"code": ""
+},
+{
+"name": "Van Munching Hall",
+"code": "VMH"
+},
+{
+"name": "Varsity Sports Teamhouse",
+"code": ""
+},
+{
+"name": "Washington Hall (Residence Hall)",
+"code": "WSH"
+},
+{
+"name": "Wicomico Hall (Residence Hall)",
+"code": "WIC"
+},
+{
+"name": "Wind Tunnel Building",
+"code": "WTU"
+},
+{
+"name": "Woods Hall",
+"code": "WDS"
+},
+{
+"name": "Worchester Hall (Residence Hall)",
+"code": "WOR"
+},
+{
+"name": "Yahentamitsi",
+"code": ""
+},
+{
+"name": "Zeta Beta Tau",
+"code": ""
+},
+{
+"name": "Zeta Psi Fraternity",
+"code": ""
+},
+{
+"name": "Zeta Tau Alpha",
+"code": ""
+}
+]

@@ -63,18 +63,26 @@ def fetch_terplink(conn) -> list:
 def fetch_email(conn) -> None:
     from . import gmail
 
-    if not gmail.is_configured() or not os.environ.get("ANTHROPIC_API_KEY"):
-        print("\nEmail: skipped (GMAIL_TOKEN / ANTHROPIC_API_KEY not configured).")
+    if not gmail.is_configured():
+        print("\nEmail: skipped (GMAIL_TOKEN not configured).")
         return
 
-    import anthropic
+    from . import extract, rules
 
-    from . import extract
+    # Free rule-based extraction by default; Claude only if an API key is configured.
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        import anthropic
 
-    client = anthropic.Anthropic()
+        client = anthropic.Anthropic()
+        extractor, api_errors, mode = (
+            lambda m: extract.extract_events(client, m), (anthropic.APIError,), "Claude"
+        )
+    else:
+        extractor, api_errors, mode = rules.extract_events, (), "rules"
+
     emails = gmail.fetch_recent(skip_ids=db.seen_email_ids(conn))
     candidates = [m for m in emails if extract.might_have_food(m)]
-    print(f"\nEmail: {len(emails)} new message(s), {len(candidates)} mention food.")
+    print(f"\nEmail ({mode}): {len(emails)} new message(s), {len(candidates)} mention food.")
     for m in emails:
         if m not in candidates:
             db.mark_email_seen(conn, m.id, m.subject, 0)
@@ -83,8 +91,8 @@ def fetch_email(conn) -> None:
     known = db.upcoming(conn, "terplink") + db.upcoming(conn, "email")
     for m in candidates:
         try:
-            found = extract.extract_events(client, m)
-        except anthropic.APIError as err:
+            found = extractor(m)
+        except api_errors as err:
             # Leave it unseen so the next run retries it.
             print(f"  error on '{m.subject[:50]}': {err.__class__.__name__}; will retry")
             continue
