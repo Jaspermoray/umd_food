@@ -12,7 +12,10 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
-LOOKBACK_QUERY = "newer_than:3d -in:chats -in:sent"
+# Only read mail with this label, so a personal inbox (e.g. TERPmail) can be used safely:
+# set up Gmail filters that apply the label to listserv/newsletter mail.
+LABEL = os.environ.get("GMAIL_LABEL", "free-food")
+LOOKBACK_QUERY = f"label:{LABEL} newer_than:3d -in:chats -in:sent"
 
 
 @dataclass
