@@ -4,3 +4,6 @@ credentials.json
 .env
 client_secret.json
 gmail_token.json
+gmail_drafts_token.json
+contacts.csv
+drafts_log.csv
