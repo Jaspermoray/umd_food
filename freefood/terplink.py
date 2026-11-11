@@ -1,4 +1,8 @@
-"""Fetch upcoming TerpLink (Campus Labs Engage) events tagged with the "Free Food" perk."""
+"""
+Fetch upcoming TerpLink (Campus Labs Engage) events with free food: those tagged with the
+"Free Food" perk, plus untagged ones whose description says food is provided (organizers
+often forget the tag).
+"""
 import html
 import re
 from datetime import datetime, timedelta, timezone
@@ -21,6 +25,14 @@ def _html_to_text(raw: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 
+def _mentions_free_food(text: str) -> bool:
+    from . import rules
+
+    return any(
+        rules.FREE_FOOD.search(p) and not rules.NOT_FREE.search(p) for p in rules._paragraphs(text)
+    )
+
+
 def fetch_events() -> list[Event]:
     now = datetime.now(timezone.utc).isoformat()
     events: list[Event] = []
@@ -33,7 +45,6 @@ def fetch_events() -> list[Event]:
                 "orderByField": "endsOn",
                 "orderByDirection": "ascending",
                 "status": "Approved",
-                "benefitNames[0]": "FreeFood",
                 "take": PAGE_SIZE,
                 "skip": skip,
             },
@@ -45,6 +56,11 @@ def fetch_events() -> list[Event]:
         batch = data.get("value", [])
         for e in batch:
             if e.get("visibility") != "Public":
+                continue
+            description = _html_to_text(e.get("description", ""))
+            if "Free Food" not in (e.get("benefitNames") or []) and not _mentions_free_food(
+                f"{e.get('name', '')}\n\n{description}"
+            ):
                 continue
             # Skip multi-day/semester-long "events" — they'd be giant calendar blocks.
             duration = datetime.fromisoformat(e["endsOn"]) - datetime.fromisoformat(e["startsOn"])
@@ -59,7 +75,7 @@ def fetch_events() -> list[Event]:
                     end=e["endsOn"],
                     location=(e.get("location") or "TBA").strip(),
                     url=EVENT_URL.format(id=e["id"]),
-                    description=_html_to_text(e.get("description", "")),
+                    description=description,
                 )
             )
         skip += len(batch)

@@ -32,7 +32,7 @@ FREE_FOOD = re.compile(
     r"(?:provided|served|available|included|on us|for all|free)\b"
     r"|\b(?:light\s+)?refreshments\b"
     rf"|\b(?:enjoy|grab|join us for|come for|stop by for|there will be)\s+(?:some\s+|free\s+)?(?:\w+\s+)?(?:{FOODS})\b"
-    r"|\bcatered\b|\bpotluck\b|\bcookout\b|\bfood\s+and\s+drinks\b",
+    r"|\bcatered\b|\bcookout\b|\bfood\s+and\s+drinks\b",
     re.I,
 )
 NOT_FREE = re.compile(
